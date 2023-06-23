@@ -5,36 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47debe1c-ab11-40c2-b2c2-c38f1c983adc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/AbstractCurrentAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/AbstractSavingsAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/CurrentAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/SavingsAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/database/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/database/SystemDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/AccountAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/AccountNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/DepositAmountTooSmallException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/WithdrawalAmountTooLargeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/messages/ExceptionMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/models/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/models/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/CurrentAccountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/CurrentAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/CurrentAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/SavingsAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/messages/ExceptionMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/exceptions/messages/ExceptionMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/CurrentAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/CurrentAccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +71,8 @@
       <recent name="com.acme.test01.anthonybuckland.accounts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SavingsAccountTest">
-    <configuration name="SavingsAccountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SavingsAccountTest.canWithdraw_Test">
+    <configuration name="CurrentAccountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -109,7 +85,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.acme.test01.anthonybuckland.accounts.SavingsAccountTest&quot;" />
+            <option value="&quot;com.acme.test01.anthonybuckland.accounts.CurrentAccountTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -120,7 +96,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SavingsAccountTest.canOpenAccount_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CurrentAccountTest.canWithdraw_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -133,7 +109,55 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.acme.test01.anthonybuckland.accounts.SavingsAccountTest.canOpenAccount_Test&quot;" />
+            <option value="&quot;com.acme.test01.anthonybuckland.accounts.CurrentAccountTest.canWithdraw_Test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="CurrentAccountTest.cannotGoBeyondOverdraftLimit_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.acme.test01.anthonybuckland.accounts.CurrentAccountTest.cannotGoBeyondOverdraftLimit_Test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="CurrentAccountTest.cannotOpenAccountWithNegativeFunds_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.acme.test01.anthonybuckland.accounts.CurrentAccountTest.cannotOpenAccountWithNegativeFunds_Test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,61 +192,13 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="SavingsAccountTest.cannotOpenAccountWithExistingId_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.acme.test01.anthonybuckland.accounts.SavingsAccountTest.cannotOpenAccountWithExistingId_Test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="SavingsAccountTest.cannotOpenAccountWithInsufficientFunds_Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.acme.test01.anthonybuckland.accounts.SavingsAccountTest.cannotOpenAccountWithInsufficientFunds_Test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SavingsAccountTest" />
         <item itemvalue="Gradle.SavingsAccountTest.canWithdraw_Test" />
-        <item itemvalue="Gradle.SavingsAccountTest.cannotOpenAccountWithExistingId_Test" />
-        <item itemvalue="Gradle.SavingsAccountTest.cannotOpenAccountWithInsufficientFunds_Test" />
-        <item itemvalue="Gradle.SavingsAccountTest.canOpenAccount_Test" />
+        <item itemvalue="Gradle.CurrentAccountTest" />
+        <item itemvalue="Gradle.CurrentAccountTest.canWithdraw_Test" />
+        <item itemvalue="Gradle.CurrentAccountTest.cannotGoBeyondOverdraftLimit_Test" />
+        <item itemvalue="Gradle.CurrentAccountTest.cannotOpenAccountWithNegativeFunds_Test" />
       </list>
     </recent_temporary>
   </component>
@@ -242,12 +218,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>40</line>
+          <line>39</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>33</line>
+          <line>32</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -287,22 +263,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>67</line>
+          <line>66</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>70</line>
+          <line>69</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>64</line>
+          <line>63</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>99</line>
+          <line>97</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -322,8 +298,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/acme/test01/anthonybuckland/accounts/SavingsAccountTest.java</url>
-          <line>103</line>
+          <line>101</line>
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/CurrentAccount.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/acme/test01/anthonybuckland/accounts/CurrentAccount.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

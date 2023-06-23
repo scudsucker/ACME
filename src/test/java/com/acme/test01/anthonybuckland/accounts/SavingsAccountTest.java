@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.acme.test01.anthonybuckland.exceptions.messages.ExceptionMessages.CANNOT_OPEN_SAVINGS_UNDER_2000;
-import static com.acme.test01.anthonybuckland.exceptions.messages.ExceptionMessages.CANNOT_OPEN_SAVINGS_ACCOUNT_WHEN_CUSTOMER_ID_EXISTS;
+import static com.acme.test01.anthonybuckland.exceptions.messages.ExceptionMessages.*;
 
 public class SavingsAccountTest {
 
@@ -68,7 +67,7 @@ public class SavingsAccountTest {
             sut.openSavingsAccount(accountId, amountToDeposit);
         });
 
-        Assertions.assertEquals(CANNOT_OPEN_SAVINGS_ACCOUNT_WHEN_CUSTOMER_ID_EXISTS.label, thrown.getMessage());
+        Assertions.assertEquals(CANNOT_OPEN_ACCOUNT_WHEN_ACCOUNT_ID_EXISTS.label, thrown.getMessage());
     }
 
     @Test
@@ -96,7 +95,6 @@ public class SavingsAccountTest {
         long amountToWithdraw = 100000L;
         long expected = 400000L;
 
-        //TODO sort out the datatypes
         sut.withdraw(accountId, (int) amountToWithdraw);
 
         Long accountBalance = sut.getAccountBalance(accountId);
@@ -111,7 +109,6 @@ public class SavingsAccountTest {
         long accountId = 2L; // has 500000L balance
         long amountToWithdraw = 100000L;
 
-        //TODO sort out the datatypes
         sut.withdraw(accountId, (int) amountToWithdraw);
     }
 

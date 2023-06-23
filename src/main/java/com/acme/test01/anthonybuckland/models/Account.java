@@ -1,7 +1,5 @@
 package com.acme.test01.anthonybuckland.models;
 
-import java.util.Objects;
-
 public class Account {
 
     private Enum<AccountType> accountType;
@@ -15,6 +13,7 @@ public class Account {
         this.balance = balance;
         this.overdraftLimit = overdraftLimit;
     }
+
     public Account(Enum<AccountType> accountType, Long balance) {
         this.accountType = accountType;
         this.balance = balance;

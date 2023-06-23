@@ -5,7 +5,6 @@ import com.acme.test01.anthonybuckland.models.AccountType;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 // NOTE: this class inherits from an interface, to allow multiple possible DB implementations
 // For the purposes of this test, there is only one implementation which is an anti-pattern.

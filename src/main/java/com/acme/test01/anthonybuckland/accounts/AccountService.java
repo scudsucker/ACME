@@ -5,9 +5,12 @@ import com.acme.test01.anthonybuckland.exceptions.WithdrawalAmountTooLargeExcept
 
 public interface AccountService {
     void openSavingsAccount(Long accountId, Long amountToDeposit);
+
     void openCurrentAccount(Long accountId);
+
     void withdraw(Long accountId, int amountToWithdraw)
             throws AccountNotFoundException, WithdrawalAmountTooLargeException;
-    void deposit(Long accountId, int amountToDeposit)throws
+
+    void deposit(Long accountId, int amountToDeposit) throws
             AccountNotFoundException;
 }
