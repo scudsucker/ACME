@@ -25,12 +25,13 @@ public class SavingsAccountTest {
 
     @BeforeEach
     public void init() {
-        systemDB = new SystemDB();
+        systemDB = SystemDB.getInstance();
+        systemDB.resetDbForTests();
     }
 
     @Test
     public void canOpenAccount_Test() {
-        SavingsAccount sut = new SavingsAccount(systemDB);
+        SavingsAccount sut = new SavingsAccount();
 
         long accountId = 5L;
         long amountToDeposit = 200000L;
@@ -44,7 +45,7 @@ public class SavingsAccountTest {
 
     @Test
     public void cannotOpenAccountWithInsufficientFunds_Test() {
-        SavingsAccount sut = new SavingsAccount(systemDB);
+        SavingsAccount sut = new SavingsAccount();
 
         long accountId = 5L;
         long amountToDeposit = 100000L; // less than the minimum
@@ -58,7 +59,7 @@ public class SavingsAccountTest {
 
     @Test
     public void cannotOpenAccountWithExistingId_Test() {
-        SavingsAccount sut = new SavingsAccount(systemDB);
+        SavingsAccount sut = new SavingsAccount();
 
         long accountId = 2L; // existing ID
         long amountToDeposit = 200000L;
@@ -72,7 +73,7 @@ public class SavingsAccountTest {
 
     @Test
     public void canDeposit_Test() {
-        SavingsAccount sut = new SavingsAccount(systemDB);
+        SavingsAccount sut = new SavingsAccount();
 
         long accountId = 2L;
         long amountToDeposit = 200000L;
@@ -89,7 +90,7 @@ public class SavingsAccountTest {
 
     @Test
     public void canWithdraw_Test() throws WithdrawalAmountTooLargeException {
-        SavingsAccount sut = new SavingsAccount(systemDB);
+        SavingsAccount sut = new SavingsAccount();
 
         long accountId = 2L; // has 500000L balance
         long amountToWithdraw = 100000L;
@@ -104,7 +105,7 @@ public class SavingsAccountTest {
 
     @Test
     public void cannotWithdrawWithInsufficientFunds_Test() throws WithdrawalAmountTooLargeException  {
-        SavingsAccount sut = new SavingsAccount(systemDB);
+        SavingsAccount sut = new SavingsAccount();
 
         long accountId = 2L; // has 500000L balance
         long amountToWithdraw = 100000L;

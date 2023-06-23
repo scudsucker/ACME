@@ -12,13 +12,10 @@ public final class SystemDB implements Database {
 
     private static SystemDB INSTANCE;
 
-    private final Map<Long, Account> userAccounts = new HashMap<>();
+    private Map<Long, Account> userAccounts = new HashMap<>();
 
     public SystemDB() {
-        this.userAccounts.put(1L, new Account(AccountType.SAVINGS, 200000L));
-        this.userAccounts.put(2L, new Account(AccountType.SAVINGS, 500000L));
-        this.userAccounts.put(3L, new Account(AccountType.CURRENT, 100000L, 1000000L));
-        this.userAccounts.put(4L, new Account(AccountType.CURRENT, 200000L, 2000000L));
+        populateDb();
     }
 
 
@@ -43,5 +40,17 @@ public final class SystemDB implements Database {
     public Account create(Long accountId, Account userAccount) {
         this.userAccounts.put(accountId, userAccount);
         return userAccounts.get(accountId);
+    }
+
+    public void resetDbForTests() {
+        this.userAccounts = new HashMap<>();
+        populateDb();
+    }
+
+    private void populateDb() {
+        this.userAccounts.put(1L, new Account(AccountType.SAVINGS, 200000L));
+        this.userAccounts.put(2L, new Account(AccountType.SAVINGS, 500000L));
+        this.userAccounts.put(3L, new Account(AccountType.CURRENT, 100000L, 1000000L));
+        this.userAccounts.put(4L, new Account(AccountType.CURRENT, 200000L, 2000000L));
     }
 }

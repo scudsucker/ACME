@@ -1,6 +1,8 @@
 package com.acme.test01.anthonybuckland.accounts;
 
+import com.acme.test01.anthonybuckland.accounts.utility.CommonAccountUtility;
 import com.acme.test01.anthonybuckland.database.Database;
+import com.acme.test01.anthonybuckland.database.SystemDB;
 import com.acme.test01.anthonybuckland.exceptions.AccountAlreadyExistsException;
 import com.acme.test01.anthonybuckland.exceptions.AccountNotFoundException;
 import com.acme.test01.anthonybuckland.exceptions.DepositAmountTooSmallException;
@@ -13,15 +15,11 @@ import static com.acme.test01.anthonybuckland.exceptions.messages.ExceptionMessa
 public class CurrentAccount extends AbstractCurrentAccount {
 
     private static final long MINIMUM_BALANCE = -10000000L;
-    private final Database db;
-
-    public CurrentAccount(Database db) {
-        this.db = db;
-    }
+    private final Database db = SystemDB.getInstance();
+    private final CommonAccountUtility utility = new CommonAccountUtility();
 
     public void openCurrentAccount(Long accountId, Long amountToDeposit) {
         if (db.getUserAccountById(accountId) != null) {
-            System.out.println("Open acc " + (amountToDeposit / 100));
             throw new AccountAlreadyExistsException(CANNOT_OPEN_ACCOUNT_WHEN_ACCOUNT_ID_EXISTS.label);
         }
         if (amountToDeposit < 0) {
@@ -35,25 +33,15 @@ public class CurrentAccount extends AbstractCurrentAccount {
     }
 
     public void withdraw(Long accountId, int amountToWithdraw) throws WithdrawalAmountTooLargeException {
-        Account account = db.getUserAccountById(accountId);
-        if (account.getBalance() < (amountToWithdraw + MINIMUM_BALANCE)) {
-            throw new WithdrawalAmountTooLargeException(CANNOT_WITHDRAW_MORE_THAN_THE_LIMIT.label);
-        }
-        account.setBalance(account.getBalance() - amountToWithdraw);
-        db.update(accountId, account);
+        utility.withdraw(accountId, amountToWithdraw, MINIMUM_BALANCE);
     }
 
     public void deposit(Long accountId, int amountToDeposit) throws AccountNotFoundException {
-        Account account = db.getUserAccountById(accountId);
-        if (account == null) {
-            throw new AccountNotFoundException(ACCOUNT_NOT_FOUND.label);
-        }
-        account.setBalance(account.getBalance() + amountToDeposit);
-        db.update(accountId, account);
+        utility.deposit(accountId, amountToDeposit);
     }
 
     public Long getAccountBalance(Long accountId) {
-        return db.getUserAccountById(accountId).getBalance();
+        return utility.getAccountBalance(accountId);
     }
 }
 

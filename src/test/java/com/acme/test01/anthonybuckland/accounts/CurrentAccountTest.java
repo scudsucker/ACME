@@ -34,12 +34,13 @@ public class CurrentAccountTest {
 
     @BeforeEach
     public void init() {
-        systemDB = new SystemDB();
+        systemDB = SystemDB.getInstance();
+        systemDB.resetDbForTests();
     }
 
     @Test
     public void canOpenAccount_Test() {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 5L;
         long amountToDeposit = 200000L;
@@ -53,7 +54,7 @@ public class CurrentAccountTest {
 
     @Test
     public void canOpenEmptyAccount_Test() {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 5L;
 
@@ -66,7 +67,7 @@ public class CurrentAccountTest {
 
     @Test
     public void canOpenEmptyAccountWithoutBalance_Test() {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 5L;
 
@@ -79,7 +80,7 @@ public class CurrentAccountTest {
 
     @Test
     public void cannotOpenAccountWithNegativeFunds_Test() {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 5L;
         long amountToDeposit = -100000L; // less than the minimum overdraft
@@ -93,7 +94,7 @@ public class CurrentAccountTest {
 
     @Test
     public void cannotOpenAccountWithExistingId_Test() {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 3L; // existing ID
         long amountToDeposit = 200000L;
@@ -107,7 +108,7 @@ public class CurrentAccountTest {
 
     @Test
     public void canDeposit_Test() {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 3L; // has 100000L balance
         long amountToDeposit = 200000L;
@@ -124,7 +125,7 @@ public class CurrentAccountTest {
 
     @Test
     public void canWithdraw_Test() throws WithdrawalAmountTooLargeException {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 4L; // has 200000L balance
         long amountToWithdraw = 100000L;
@@ -139,7 +140,7 @@ public class CurrentAccountTest {
 
     @Test
     public void canGoIntoOverdraft_Test() throws WithdrawalAmountTooLargeException {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 4L; // has 200000L balance
         long amountToWithdraw = 300000L;
@@ -154,7 +155,7 @@ public class CurrentAccountTest {
 
     @Test
     public void cannotGoBeyondOverdraftLimit_Test() throws WithdrawalAmountTooLargeException {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 4L; // has 200000L balance
         long amountToWithdraw = 50000000L; // very large
@@ -170,7 +171,7 @@ public class CurrentAccountTest {
 
     @Test
     public void cannotWithdrawWithInsufficientFunds_Test() throws WithdrawalAmountTooLargeException  {
-        CurrentAccount sut = new CurrentAccount(systemDB);
+        CurrentAccount sut = new CurrentAccount();
 
         long accountId = 3L; // has 500000L balance
         long amountToWithdraw = 100000L;
